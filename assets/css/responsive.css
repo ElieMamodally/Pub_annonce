@@ -1,0 +1,77 @@
+
+
+@media (max-width: 480px) {
+    header{
+        width: 100%;
+    }
+    nav a{
+        font-size: .7rem;
+    }
+    main{
+        width: 100%;
+    }
+    .post p{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+    }
+    .notification{
+        max-width: 355px;
+        overflow: hidden;
+    }
+    .notification p{
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        -webkit-line-clamp: 1;
+        
+    }
+    
+
+}
+
+/* Téléphones en mode paysage et petites tablettes */
+@media (min-width: 481px) and (max-width: 768px) {
+    header{
+        width: 100%;
+    }
+    nav a{
+        font-size: .7rem;
+    }
+    main{
+        width: 100%;
+    }
+    .post p{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+    }
+    .notification{
+        max-width: 405px;
+        overflow: hidden;
+    }
+    .notification p{
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        -webkit-line-clamp: 1;
+        
+    }
+    
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    
+}
+
+
+@media (min-width: 1201px) {
+    
+}
+
