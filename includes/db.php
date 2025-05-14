@@ -6,7 +6,8 @@ try {
         getenv("DB_PASS")
     );
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "✅ Connexion réussie à la base de données avec PDO.";
 } catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
+    die("❌ Erreur de connexion : " . $e->getMessage());
 }
 ?>
