@@ -8,7 +8,6 @@ $user = getenv("DB_USER");
 $pass = getenv("DB_PASS");
 $db   = getenv("DB_NAME");
 
-$conn = new mysqli($host, $user, $pass, $db);
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
