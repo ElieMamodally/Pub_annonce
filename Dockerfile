@@ -1,12 +1,17 @@
+# Utilise une image officielle PHP avec Apache
 FROM php:8.2-apache
 
-# Copier tous les fichiers dans /var/www/html
-COPY . /var/www/html/
+# Installe les extensions nécessaires, notamment pdo_mysql
+RUN docker-php-ext-install pdo pdo_mysql mysqli
 
-# Activer mod_rewrite si nécessaire
+# Active mod_rewrite (utile pour les routes propres)
 RUN a2enmod rewrite
 
-# Donner les bons droits
+# Copie tous les fichiers du projet dans le dossier du serveur Apache
+COPY . /var/www/html/
+
+# Donne les bons droits (optionnel mais recommandé)
 RUN chown -R www-data:www-data /var/www/html
 
+# Expose le port 80 (port par défaut d'Apache)
 EXPOSE 80
